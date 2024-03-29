@@ -5,9 +5,11 @@ import Users from './routes/users/users.component';
 import Inventory from './routes/inventory/inventory.component';
 import './App.css';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function App() {
+
   return (
   <div className="App">
     <Link to="/home">

@@ -1,3 +1,20 @@
 body{
     background-color: lightgray;
 }
+
+#title {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#c-item {
+    height: 500px;
+}
+
+#c-img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover
+}
