@@ -17,6 +17,7 @@ const images = [
     }
 ]
 
+// Cdoe for home page carousel
 export default function SneakerCarousel() {
 
     const [index, setIndex] = useState(0);

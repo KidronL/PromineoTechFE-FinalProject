@@ -1,5 +1,6 @@
 import React from "react";
 
+//Code for the form to create a new shoe.
 export default function ShoeForm({newShoe, setNewShoe, createShoe}) {
 
     const handleSubmit = (e) => {

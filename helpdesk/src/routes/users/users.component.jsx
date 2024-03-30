@@ -2,6 +2,7 @@ import React from "react";
 import {useState, useEffect} from "react";
 import UsersList from "../../components/list.users";
 
+//Code for users page
 export default function Users() {
 
     const USERS_URL = "https://658125763dfdd1b11c427f36.mockapi.io/users";

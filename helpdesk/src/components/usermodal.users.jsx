@@ -1,6 +1,7 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
 
+//Code to display user details in modal
 export default function UserModal({ show, onHide, user }) {
     return (
         <Modal

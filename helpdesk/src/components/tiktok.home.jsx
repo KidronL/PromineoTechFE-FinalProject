@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 
+//Code to grab and embed a tiktok page
 export default function TikTokEmbed({ username }) {
     useEffect(() => {
         const script = document.createElement('script');

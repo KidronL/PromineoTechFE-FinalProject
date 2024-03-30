@@ -2,6 +2,7 @@ import React from "react";
 import UserModal from "./usermodal.users";
 import { useState } from "react";
 
+//Code to display list of users
 export default function UsersList({users}) {
 
     const [showModal, setShowModal] = useState(false);

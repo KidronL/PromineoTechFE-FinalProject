@@ -3,6 +3,7 @@ import InventoryTable from "../../components/table.inventory";
 import { useState, useEffect } from "react";
 import ShoeForm from "../../components/form.inventory";
 
+//Code for inventory
 export default function Inventory () {
 
   const SHOES_URL = "https://658125763dfdd1b11c427f36.mockapi.io/Shoes";
