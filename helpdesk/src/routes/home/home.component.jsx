@@ -1,5 +1,6 @@
 import React from "react";
 import SneakerCarousel from "../../components/carousel.home";
+import TikTokEmbed from "../../components/tiktok.home";
 
 export default function Home(){
     return <div>
@@ -7,5 +8,6 @@ export default function Home(){
                 Home
             </h1>
             <SneakerCarousel />
+            <TikTokEmbed username="nicekicks"/>
         </div>;
 };

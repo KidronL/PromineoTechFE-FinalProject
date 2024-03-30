@@ -1,26 +1,34 @@
 import React from "react";
 
-export default function Form({newShoe, setNewShoe, createShoe}) {
+export default function ShoeForm({newShoe, setNewShoe, createShoe}) {
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         createShoe();
-    };
-        
+        setNewShoe({
+            name: "",
+            model: "",
+            brand: "",
+            inventory: "",
+            price: "",
+        });
+    };  
 
-    return <div className="container mb-5">
+    return (
+        <div className="container mb-5">
             <form id="form" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="shoeName">Shoe Name</label>
+                <div>
+                    <label htmlFor="name">Shoe Name</label>
                     <input
                         type="text"
                         className="form-control"
-                        id="shoeName"
+                        id="name"
                         placeholder="Shoe Name"
-                        value={newShoe.shoeName}
-                        onChange={(e) => setNewShoe({...newShoe, shoeName: e.target.value})}
+                        value={newShoe.name}
+                        onChange={(e) => setNewShoe({...newShoe, name: e.target.value})}
                     />
                 </div>
-                <div className="form-group">
+                <div>
                     <label htmlFor="model">Model</label>
                     <input
                         type="text"
@@ -31,7 +39,7 @@ export default function Form({newShoe, setNewShoe, createShoe}) {
                         onChange={(e) => setNewShoe({...newShoe, model: e.target.value})}
                     />
                 </div>
-                <div className="form-group">
+                <div>
                     <label htmlFor="brand">Brand</label>
                     <input
                         type="text"
@@ -42,7 +50,7 @@ export default function Form({newShoe, setNewShoe, createShoe}) {
                         onChange={(e) => setNewShoe({...newShoe, brand: e.target.value})}
                     />
                 </div>
-                <div className="form-group">
+                <div>
                     <label htmlFor="inventory">Inventory</label>
                     <input
                         type="number"
@@ -53,7 +61,7 @@ export default function Form({newShoe, setNewShoe, createShoe}) {
                         onChange={(e) => setNewShoe({...newShoe, inventory: e.target.value})}
                     />
                 </div>
-                <div className="form-group">
+                <div>
                     <label htmlFor="price">Price</label>
                     <input
                         type="number"
@@ -64,7 +72,8 @@ export default function Form({newShoe, setNewShoe, createShoe}) {
                         onChange={(e) => setNewShoe({...newShoe, price: e.target.value})}
                     />
                 </div>
-                <button type="submit" className="btn btn-primary" onClick={createShoe}>Submit</button>
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
-        </div>;
+        </div>
+    ) 
 };

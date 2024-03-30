@@ -10,8 +10,11 @@ export default function Users() {
         {
             id: 0,
             name: "",
+            avatar: "",
             position: "",
-            number: ""
+            number: "",
+            favshoe: "",
+            size: ""
         }
     ]);
 

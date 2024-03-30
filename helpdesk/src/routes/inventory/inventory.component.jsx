@@ -1,7 +1,7 @@
 import React from "react";
 import InventoryTable from "../../components/table.inventory";
-import Form from "../../components/form.inventory";
 import { useState, useEffect } from "react";
+import ShoeForm from "../../components/form.inventory";
 
 export default function Inventory () {
 
@@ -9,7 +9,7 @@ export default function Inventory () {
 
   const [shoes, setShoes] = useState([
       {
-          shoeName: '',
+          name: '',
           model: '',
           brand: '',
           inventory: 0,
@@ -20,7 +20,7 @@ export default function Inventory () {
 
   const [newShoe, setNewShoe] = useState([
       {
-          shoeName: '',
+          name: '',
           model: '',
           brand: '',
           inventory: 0,
@@ -75,7 +75,7 @@ export default function Inventory () {
 
     return <div>
         <h1 id="title">Inventory</h1>
-        <InventoryTable shoes={shoes} deleteShoes={deleteShoe} updateInventory={updateInventory} updateShoe={updateShoe} setUpdateShoe={setUpdateShoe}/>
-        <Form newShoe={newShoe} setNewShoe={setNewShoe} createShoe={createShoe}/>
+        <InventoryTable shoes={shoes} deleteShoe={deleteShoe} updateInventory={updateInventory} updateShoe={updateShoe} setUpdateShoe={setUpdateShoe}/>
+        <ShoeForm newShoe={newShoe} setNewShoe={setNewShoe} createShoe={createShoe}/>
         </div>;
 };
